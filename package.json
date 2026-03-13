@@ -2,7 +2,7 @@
   "name": "unlock-pdf",
   "productName": "unlock-pdf",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "Unlock PDF files with password",
   "main": ".vite/build/main.js",
   "private": true,
   "scripts": {
@@ -15,7 +15,7 @@
   "keywords": [],
   "author": {
     "name": "Awan",
-    "email": "awancoder@gmail.com"
+    "email": "awan@awandigitals.com"
   },
   "license": "MIT",
   "devDependencies": {
@@ -32,6 +32,7 @@
     "vite": "^5.4.21"
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.1"
+    "electron-squirrel-startup": "^1.0.1",
+    "node-qpdf2": "^6.0.0"
   }
 }

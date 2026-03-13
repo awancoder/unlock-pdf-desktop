@@ -4,12 +4,21 @@ const { FuseV1Options, FuseVersion } = require('@electron/fuses');
 module.exports = {
   packagerConfig: {
     asar: true,
+    icon: 'src/assets/icon.png',
+    name: 'Unlock PDF',
+    extraResource: [
+      'src/bin',
+    ],
   },
   rebuildConfig: {},
   makers: [
     {
       name: '@electron-forge/maker-squirrel',
-      config: {},
+      config: {
+        name: 'UnlockPDF',
+        setupExe: 'UnlockPDF-Setup.exe',
+        setupIcon: './src/assets/icon.ico',
+      },
     },
     {
       name: '@electron-forge/maker-zip',
@@ -60,7 +69,7 @@ module.exports = {
       [FuseV1Options.EnableNodeOptionsEnvironmentVariable]: false,
       [FuseV1Options.EnableNodeCliInspectArguments]: false,
       [FuseV1Options.EnableEmbeddedAsarIntegrityValidation]: true,
-      [FuseV1Options.OnlyLoadAppFromAsar]: true,
+      [FuseV1Options.OnlyLoadAppFromAsar]: false,
     }),
   ],
 };
